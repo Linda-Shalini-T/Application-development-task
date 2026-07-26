@@ -1,0 +1,165 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#1e3c72,#2a5298);
+    min-height:100vh;
+    padding:20px;
+}
+
+/* Main Container */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* Card */
+.card{
+    background:#ffffff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+    margin-top:20px;
+}
+
+/* Heading */
+h1{
+    text-align:center;
+    color:#1e3c72;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+/* Labels */
+label{
+    font-weight:500;
+    color:#333;
+}
+
+/* Input Fields */
+input,
+select{
+    width:100%;
+    padding:12px;
+    margin-top:5px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+input:focus,
+select:focus{
+    outline:none;
+    border-color:#2a5298;
+    box-shadow:0 0 8px rgba(42,82,152,0.3);
+}
+
+/* Buttons */
+button{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    margin-right:5px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0px 5px 15px rgba(118,75,162,0.4);
+}
+
+/* Dashboard Menu */
+.menu{
+    text-align:center;
+    margin-top:20px;
+}
+
+.menu a{
+    text-decoration:none;
+}
+
+.menu button{
+    width:220px;
+    margin:10px;
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+th{
+    background:#1e3c72;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+tr:nth-child(even){
+    background:#f5f7ff;
+}
+
+tr:hover{
+    background:#e8edff;
+}
+
+/* Login Page */
+.login-container{
+    width:400px;
+    margin:80px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0px 10px 25px rgba(0,0,0,0.2);
+}
+
+.login-container h1{
+    margin-bottom:25px;
+}
+
+/* Links */
+a{
+    text-decoration:none;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .login-container{
+        width:95%;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    table{
+        font-size:12px;
+    }
+
+    button{
+        margin-top:5px;
+    }
+}

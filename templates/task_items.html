@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Items</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<a href="/dashboard">
+    <button type="button">
+  ← Back
+    </button>
+</a>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>TASK ITEM CRUD</h1>
+
+<form method="post">
+
+<label>Task Item ID</label>
+<input type="text" name="task_id">
+
+<label>Lesson ID</label>
+<input type="text" name="lesson_id">
+
+<label>Assigned To</label>
+<input type="text" name="assigned_to">
+
+<label>Start Date</label>
+<input type="date" name="start_date">
+
+<label>Due Date</label>
+<input type="date" name="due_date">
+
+<label>Status</label>
+<select name="status">
+    <option>Pending</option>
+    <option>Completed</option>
+</select>
+
+<button formaction="/add-task" type="submit">
+Add
+</button>
+
+<button formaction="/update-task" type="submit">
+Update
+</button>
+
+<button formaction="/delete-task" type="submit">
+Delete
+</button>
+
+<button formaction="/search-task" type="submit">
+Search
+</button>
+
+</form>
+
+<table>
+
+<tr>
+    <th>Task ID</th>
+    <th>Lesson ID</th>
+    <th>Assigned To</th>
+    <th>Start Date</th>
+    <th>Due Date</th>
+    <th>Status</th>
+</tr>
+{% for task in tasks %}
+
+<tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ task.lesson_id }}</td>
+    <td>{{ task.assigned_to }}</td>
+    <td>{{ task.start_date }}</td>
+    <td>{{ task.due_date }}</td>
+    <td>{{ task.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+</div>
+
+</body>
+</html>

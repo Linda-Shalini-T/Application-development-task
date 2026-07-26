@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System - Login</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <h1>Task Management System</h1>
+
+        {% if error %}
+            <p style="color:red;text-align:center;margin-bottom:15px;">
+                {{ error }}
+            </p>
+        {% endif %}
+
+        <form action="/login" method="post">
+
+            <label>Username</label>
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter Username"
+                required>
+
+            <label>Password</label>
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required>
+
+            <button type="submit" style="width:100%;">
+                Login
+            </button>
+
+        </form>
+
+        <br>
+
+        <div style="text-align:center;color:#666;">
+            <p>AI Video Tutorial Task Management System</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

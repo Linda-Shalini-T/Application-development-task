@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Report</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<a href="/dashboard">
+    <button type="button">
+        ← Back
+    </button>
+</a>
+
+<div class="container">
+
+<div class="card">
+
+<h1>TASK REPORT</h1>
+
+<table>
+
+<tr>
+    <th>Stage ID</th>
+    <th>Task Item ID</th>
+    <th>Due Date</th>
+    <th>Last Updated Date</th>
+    <th>Status</th>
+</tr>
+
+{% for row in report_data %}
+
+<tr>
+    <td>{{ row.stage_id }}</td>
+    <td>{{ row.task_id }}</td>
+    <td>{{ row.due_date }}</td>
+    <td>{{ row.last_updated }}</td>
+    <td>{{ row.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>

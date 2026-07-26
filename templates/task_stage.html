@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Stage</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<a href="/dashboard">
+    <button type="button">
+        ← Back
+    </button>
+</a>
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>TASK STAGE FORM</h1>
+
+<form method="post">
+
+<label>Stage ID</label>
+<input type="text" name="stage_id">
+
+<label>Task Item ID</label>
+<input type="text" name="task_id">
+
+<label>Stage Name</label>
+<input type="text" name="stage_name">
+
+<label>Stage Status</label>
+<select name="stage_status">
+    <option>Pending</option>
+    <option>Completed</option>
+</select>
+
+<label>Last Updated Date</label>
+<input type="date" name="last_updated">
+
+<label>Status</label>
+<select name="status">
+    <option>Pending</option>
+    <option>Completed</option>
+</select>
+
+<button formaction="/add-stage" type="submit">
+    Add
+</button>
+
+<button formaction="/update-stage" type="submit">
+    Update
+</button>
+
+<button formaction="/delete-stage" type="submit">
+    Delete
+</button>
+
+<button formaction="/search-stage" type="submit">
+    Search
+</button>
+
+</form>
+
+<table>
+
+<tr>
+    <th>Stage ID</th>
+    <th>Task Item ID</th>
+    <th>Stage Name</th>
+    <th>Stage Status</th>
+    <th>Last Updated</th>
+    <th>Status</th>
+</tr>
+{% for stage in stages %}
+
+<tr>
+    <td>{{ stage.stage_id }}</td>
+    <td>{{ stage.task_item_id }}</td>
+    <td>{{ stage.stage_name }}</td>
+    <td>{{ stage.stage_status }}</td>
+    <td>{{ stage.last_updated_date }}</td>
+    <td>{{ stage.status }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+</div>
+
+</body>
+</html>
